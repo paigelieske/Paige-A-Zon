@@ -1,0 +1,23 @@
+{
+  "name": "paige-a-zon",
+  "version": "1.0.0",
+  "description": "storefront",
+  "main": "paige-a-zon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paigelieske/Paige-a-Zon.git"
+  },
+  "author": "Paige Lieske",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paigelieske/Paige-a-Zon/issues"
+  },
+  "homepage": "https://github.com/paigelieske/Paige-a-Zon#readme",
+  "dependencies": {
+    "inquirer": "^6.3.1",
+    "mysql": "^2.17.1"
+  }
+}
