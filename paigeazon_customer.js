@@ -12,11 +12,8 @@ var connection = mysql.createConnection({
 
 connection.connect(function (err) {
     if (err) throw err;
-    console.log("connected as id " + connection.threadId);
     inventory();
 });
-
-// var total = new Number(parseFloat(res[0].price * qtyBuy)).toFixed(2)
 
 function inventory() {
     console.log("Welcome to Paige-a-Zon");
@@ -24,7 +21,7 @@ function inventory() {
         if (err) throw err;
         var display = new table({
             head: ["Item ID", "Product Name", "Department", "Price", "In Stock"],
-            colWidths: [10, 30, 30, 15, 10]
+            colWidths: [10, 30, 40, 15, 10]
         });
         for (var i = 0; i < res.length; i++) {
             res[i].price = new Number(parseFloat(res[i].price)).toFixed(2);
@@ -69,7 +66,6 @@ function makeSale(productToBuy, qtyBuy) {
         console.log("Checking stock for item " + res[0].product_name + ".......");
         if (err) throw (err);
         if (qtyBuy <= res[0].stock_quantity) {
-            // console.log(qtyBuy);
             var total = new Number(parseFloat(res[0].price * qtyBuy)).toFixed(2);
             console.log("Congratulations - your item is in stock.");
             console.log("The total for item number " + res[0].item_id + ", product " + res[0].product_name + ", is $" + total + ".");
@@ -81,6 +77,5 @@ function makeSale(productToBuy, qtyBuy) {
             console.log("I'm sorry, we don't have enough stock to complete your order.  Please try again.");
         }
         inventory();
-        // connection.end();
     })
 };
