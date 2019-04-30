@@ -19,3 +19,10 @@ If the sale is succesful the inventory is updated to reflect the change in a ava
 
 Please review the screenshots for a visual walkthrough of the application.
 
+![Initial](/screenshots/initial.jpg)
+
+![Success](/screenshots/success.jpg)
+
+![Fail](/screenshots/fail.jpg)
+
+![End](/screenshots/end.jpg)
